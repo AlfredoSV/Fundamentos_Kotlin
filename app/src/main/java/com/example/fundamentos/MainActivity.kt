@@ -18,7 +18,9 @@ class MainActivity : AppCompatActivity() {
         //estructuraWhen()
         //estructuraIf()
         //println(estructuraDoWhile())
-        usoDeBreak()
+        //usoDeBreak()
+        //mostrarNombre("Alfredo")
+        arreglosYMatrices()
 
     }
 
@@ -111,4 +113,25 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    public fun mostrarNombre(nombre : String){
+        println("Mi nombre es $nombre")
+    }
+
+    public fun arreglosYMatrices(){
+
+        var nombres : Array<String> = arrayOf("Alfredo","Jorge","Mario")
+
+        var numeros = arrayOf(
+            intArrayOf(3,4,5),
+            intArrayOf(35,7,8),
+            intArrayOf(4,5,6,6)
+        )
+
+        for (nombre in nombres){
+
+            println(nombre)
+
+        }
+
+    }
 }
