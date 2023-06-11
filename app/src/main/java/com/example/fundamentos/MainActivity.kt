@@ -120,7 +120,7 @@ class MainActivity : AppCompatActivity() {
     public fun arreglosYMatrices(){
 
         var nombres : Array<String> = arrayOf("Alfredo","Jorge","Mario")
-
+        nombres.set(0,"AlfredoModi")
         var numeros = arrayOf(
             intArrayOf(3,4,5),
             intArrayOf(35,7,8),
@@ -133,5 +133,15 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        for(i in nombres.indices)
+            println(nombres.get(i))
+
+        for(i in 0..nombres.size -1)
+            println("${i + 1}: ${nombres.get(i)}")
+
+
+
     }
+
+
 }
