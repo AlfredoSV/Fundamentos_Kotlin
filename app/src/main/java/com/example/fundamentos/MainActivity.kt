@@ -20,7 +20,10 @@ class MainActivity : AppCompatActivity() {
         //println(estructuraDoWhile())
         //usoDeBreak()
         //mostrarNombre("Alfredo")
-        arreglosYMatrices()
+        //arreglosYMatrices()
+        //coleccionSetInmutables()
+        //coleccionSetMutables()
+        coleccionListastInmutablesYMutables()
 
     }
 
@@ -143,5 +146,51 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    public fun coleccionSetInmutables(){
+
+        var clientesIds : Set<Int> = setOf(35,56,67)
+        var datos = setOf(456,"Alfredo")
+        //clientesIds.add(34)
+
+        println("El set clientesIds contine el valor 35 ${clientesIds.contains(35)}")
+        println("El set clientesIds contine el valor 0 ${clientesIds.contains(0)}")
+
+        println("Tamaño de datos ${datos.size}")
+
+
+    }
+
+    public fun coleccionSetMutables(){
+
+        var clientesIds : MutableSet<Int> = mutableSetOf(35,56,67)
+        var datos = mutableSetOf(456,"Alfredo")
+
+        clientesIds.add(0)
+        println("El set clientesIds contine el valor 35 ${clientesIds.contains(35)}")
+        println("El set clientesIds contine el valor 0 ${clientesIds.contains(0)}")
+
+        println("Tamaño de datos ${datos.size}")
+
+
+    }
+
+    public fun coleccionListastInmutablesYMutables(){
+
+        var clientesIds : List<Int> = listOf(35,56,67)
+        //clientesIds.add(0)
+        println("La lista clientesIds contine el valor 35 ${clientesIds.contains(35)}")
+        println("La lista clientesIds contine el valor 0 ${clientesIds.contains(0)}")
+
+        println("Tamaño de datos ${clientesIds.size}")
+
+        var clientesIds2 : MutableList<Int> = mutableListOf(35,56,67)
+        clientesIds2.add(0)
+        println("La lsiat clientesIds2 contine el valor 35 ${clientesIds.contains(35)}")
+        println("La list clientesIds2 contine el valor 0 ${clientesIds.contains(0)}")
+
+        println("Tamaño de datos ${clientesIds.size}")
+
+
+    }
 
 }
