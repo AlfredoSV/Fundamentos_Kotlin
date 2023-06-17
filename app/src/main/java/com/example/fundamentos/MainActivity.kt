@@ -23,7 +23,8 @@ class MainActivity : AppCompatActivity() {
         //arreglosYMatrices()
         //coleccionSetInmutables()
         //coleccionSetMutables()
-        coleccionListastInmutablesYMutables()
+        //coleccionListastInmutablesYMutables()
+        mapMutablesEInmutables()
 
     }
 
@@ -190,6 +191,33 @@ class MainActivity : AppCompatActivity() {
 
         println("Tamaño de datos ${clientesIds.size}")
 
+
+    }
+
+    public fun mapMutablesEInmutables(){
+
+        println("Mutables")
+        var usuarios : Map<Int,String> = mapOf(
+            1 to "Alfredo",
+            2 to "Jorge"
+        )
+
+
+        for(us in usuarios.keys){
+            println(usuarios.getValue(us))
+        }
+
+        println("Inmutables")
+        var usuarios2 : MutableMap<Int,String> = mutableMapOf(
+            1 to "Alfredo",
+            2 to "Jorge"
+        )
+
+        usuarios2.put(3,"Sofia")
+
+        for(us in usuarios2.keys){
+            println(usuarios2.getValue(us))
+        }
 
     }
 
